@@ -3,12 +3,13 @@ package net.davoleo.javajuice.math.vector
 import org.junit.jupiter.api.Test
 
 import kotlin.math.abs
+import kotlin.math.pow
 
 internal class Vector2dTest {
 
     val a : Double = 5.3
     val b : Double = 2.4
-    val norm1 : Double = 7.7
+    val norm0: Double = 0.0
     val norm2 : Double = 5.818075283
     val normInf : Double = 5.3
     val mul : Double = 43.3
@@ -22,9 +23,9 @@ internal class Vector2dTest {
 
     @Test
     fun norm() {
-        assert(abs(vec2d.norm(1) - norm1) < delta)
+        assert(abs(vec2d.norm(0) - norm0) < delta)
         assert(abs(vec2d.norm(2) - norm2) < delta)
-        assert(abs(vec2d.norm(3) - normInf) < delta)
+        assert(abs(vec2d.norm(-1) - normInf) < delta)
     }
 
     @Test

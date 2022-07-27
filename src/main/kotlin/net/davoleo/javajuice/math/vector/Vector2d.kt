@@ -18,11 +18,19 @@ class Vector2d(a: Double, b: Double) : Vector {
     override fun norm(type: Int): Double {
         // Norma 1
         return when (type) {
-            1 -> vec[0] + vec[1]
-            // Norma 2
-            2 -> sqrt(vec[0].pow(2.0) + vec[1].pow(2.0))
+            // Norma 0
+            0 -> {
+                val res : Double = 0.0
+                if(vec[0] != 0.0)
+                    res.inc()
+                if(vec[1] != 0.0)
+                    res.inc()
+                return res
+            }
             // Norma inf
-            else -> max(vec[0], vec[1])
+            -1 -> max(vec[0], vec[1])
+            // Norma >= 1
+            else -> (vec[0].pow(type) + vec[1].pow(type)).pow(1.0/type)
         }
     }
 
