@@ -1,5 +1,6 @@
 # Gradle Folder
 .gradle
+build
 
 #IDEA Folder
 .idea
