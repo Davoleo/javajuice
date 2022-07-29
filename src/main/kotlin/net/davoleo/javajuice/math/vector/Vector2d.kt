@@ -16,7 +16,6 @@ class Vector2d(a: Double, b: Double) : Vector {
         get() = 2
 
     override fun norm(type: Int): Double {
-        // Norma 1
         return when (type) {
             // Norma 0
             0 -> {
