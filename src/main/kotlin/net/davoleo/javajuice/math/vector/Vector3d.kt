@@ -18,13 +18,13 @@ class Vector3d(a: Double, b: Double, c: Double) : Vector {
         return when (type) {
             // Norma 0
             0 -> {
-                val res : Double = 0.0
+                var res= 0.0
                 if(vec[0] != 0.0)
-                    res.inc()
+                    res++
                 if(vec[1] != 0.0)
-                    res.inc()
+                    res++
                 if(vec[2] != 0.0)
-                    res.inc()
+                    res++
                 return res
             }
             // Norma inf
