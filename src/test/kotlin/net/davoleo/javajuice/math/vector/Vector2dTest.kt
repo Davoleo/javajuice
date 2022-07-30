@@ -9,7 +9,7 @@ internal class Vector2dTest {
 
     val a : Double = 5.3
     val b : Double = 2.4
-    val norm0: Double = 0.0
+    val norm0: Double = 2.0
     val norm2 : Double = 5.818075283
     val normInf : Double = 5.3
     val mul : Double = 43.3
